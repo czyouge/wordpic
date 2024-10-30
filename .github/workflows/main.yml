@@ -25,10 +25,10 @@ jobs:
           pip install pyinstaller  # 安装 PyInstaller
 
       - name: Build application
-        run: pyinstaller --onefile --windowed your_script.py  # 使用 PyInstaller 打包为 macOS 应用
+        run: pyinstaller --onefile --windowed wordpic.py  # 使用 PyInstaller 打包为 macOS 应用
 
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
           name: macos-app
-          path: dist/your_script.app  # 上传 .app 文件，方便下载
+          path: dist/wordpic.app  # 上传 .app 文件，方便下载
