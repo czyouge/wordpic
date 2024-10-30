@@ -31,4 +31,4 @@ jobs:
         uses: actions/upload-artifact@v3  # 使用新版 v3
         with:
           name: macos-app
-          path: dist/wordpic.app
+          path: dist/wordpics.app
