@@ -25,7 +25,7 @@ jobs:
           pip install pyinstaller
 
       - name: Build application
-        run: pyinstaller --onefile --windowed wordpic.py
+        run: pyinstaller --onefile --windowed --icon=my_icon.icns wordpic.py
 
       - name: Upload artifact
         uses: actions/upload-artifact@v3  # 使用新版 v3
