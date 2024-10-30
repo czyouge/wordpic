@@ -24,8 +24,13 @@ jobs:
           python -m pip install --upgrade pip
           pip install pyinstaller
 
+      - name: Add icon file
+        run: |
+          mkdir -p icons
+          echo "<icon-file-content>" > icons/my_icon.icns  # 替换 <icon-file-content> 为你的图标内容
+
       - name: Build application
-        run: pyinstaller --onefile --windowed --no-icon wordpic.py  # 使用 --no-icon 参数
+        run: pyinstaller --onefile --windowed --icon=icons/icon.icns wordpic.py
 
       - name: Upload artifact
         uses: actions/upload-artifact@v3
